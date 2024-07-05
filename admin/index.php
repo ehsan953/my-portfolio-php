@@ -389,25 +389,25 @@ $c++;
                     </tr>
                   </thead>
                   <tbody>
-<?php
-$q = "SELECT * FROM personal_info";
-$r = mysqli_query($db, $q);
-$c = 1;
-while($pi=mysqli_fetch_array($r)){
-?>
-  <tr>
-                      <td><?=$c?></td>
-                      <td><?=$pi['label']?></td>
-                      <td><?=$pi['value']?></td>
-                      
-                      <td>
-                        <a href="../include/deletepi.php?id=<?=$pi['id']?>">Delete</a>
-                      </td>
-                    </tr>
-<?php
-$c++;
-}
-?>
+                    <?php
+                      $q = "SELECT * FROM personal_info";
+                      $r = mysqli_query($db, $q);
+                      $c = 1;
+                      while($pi=mysqli_fetch_array($r)){
+                    ?>
+                      <tr>
+                        <td><?=$c?></td>
+                        <td><?=$pi['label']?></td>
+                        <td><?=$pi['value']?></td>
+                        
+                        <td>
+                          <a href="../include/deletepi.php?id=<?=$pi['id']?>">Delete</a>
+                        </td>
+                      </tr>
+                    <?php
+                      $c++;
+                      }
+                    ?>
                     
 
                   </tbody>
@@ -471,28 +471,28 @@ $c++;
                     </tr>
                   </thead>
                   <tbody>
-<?php
-$q = "SELECT * FROM resume";
-$r = mysqli_query($db, $q);
-$c = 1;
-while($pi=mysqli_fetch_array($r)){
-?>
-  <tr>
-                      <td><?=$c?></td>
-                      <td><?=$pi['type']?></td>
-                      <td><?=$pi['title']?></td>
-                      <td><?=$pi['time']?></td>
-                      <td><?=$pi['org']?></td>
-                      <td><?=$pi['about_exp']?></td>
-                      
-                      <td>
-                        <a href="../include/deleteresume.php?id=<?=$pi['id']?>">Delete</a>
-                      </td>
-                    </tr>
-<?php
-$c++;
-}
-?>
+                    <?php
+                      $q = "SELECT * FROM resume";
+                      $r = mysqli_query($db, $q);
+                      $c = 1;
+                      while($pi=mysqli_fetch_array($r)){
+                    ?>
+                      <tr>
+                        <td><?=$c?></td>
+                        <td><?=$pi['type']?></td>
+                        <td><?=$pi['title']?></td>
+                        <td><?=$pi['time']?></td>
+                        <td><?=$pi['org']?></td>
+                        <td><?=$pi['about_exp']?></td>
+                        
+                        <td>
+                          <a href="../include/deleteresume.php?id=<?=$pi['id']?>">Delete</a>
+                        </td>
+                      </tr>
+                    <?php
+                      $c++;
+                      }
+                    ?>
                     
 
                   </tbody>
@@ -570,27 +570,27 @@ $c++;
                     </tr>
                   </thead>
                   <tbody>
-<?php
-$q = "SELECT * FROM portfolio";
-$r = mysqli_query($db, $q);
-$c = 1;
-while($pi=mysqli_fetch_array($r)){
-?>
-                    <tr>
-                      <td><?=$c?></td>
-                      <td><?=$pi['project_type']?></td>
-                      <td><?=$pi['project_name']?></td>
-                      <td><img src="../images/<?=$pi['project_pic']?>" style="width:150px"></td>
-                      <td><a href="<?=$pi['project_link']?>" target="_blank">Open Link</a></td>
-                      
-                      <td>
-                        <a href="../include/deleteportfolio.php?id=<?=$pi['id']?>">Delete</a>
-                      </td>
-                    </tr>
-<?php
-$c++;
-}
-?>
+                    <?php
+                      $q = "SELECT * FROM portfolio";
+                      $r = mysqli_query($db, $q);
+                      $c = 1;
+                      while($pi=mysqli_fetch_array($r)){
+                    ?>
+                      <tr>
+                        <td><?=$c?></td>
+                        <td><?=$pi['project_type']?></td>
+                        <td><?=$pi['project_name']?></td>
+                        <td><img src="../images/<?=$pi['project_pic']?>" style="width:150px"></td>
+                        <td><a href="<?=$pi['project_link']?>" target="_blank">Open Link</a></td>
+                        
+                        <td>
+                          <a href="../include/deleteportfolio.php?id=<?=$pi['id']?>">Delete</a>
+                        </td>
+                      </tr>
+                    <?php
+                      $c++;
+                      }
+                    ?>
                     
 
                   </tbody>
