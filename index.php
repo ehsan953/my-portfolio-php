@@ -130,11 +130,13 @@ $user_data = mysqli_fetch_array($run);
       }
         ?>
 
-<?php if($user_data['skype']!=''){?>
+        <?php 
+          if($user_data['skype']!=''){
+        ?>
           <!-- <a href="https://linkedin.com/<?=$user_data['skype']?>" class="skype"><i class="bi bi-skype"></i></a> -->
           <a href="https://join.skype.com/invite/Wspb69smcwsL" class="skype"><i class="bi bi-skype"></i></a>
         <?php
-      }
+          }
         ?>
         
         
@@ -249,20 +251,20 @@ $user_data = mysqli_fetch_array($run);
 
         <div class="d-flex" style="flex-wrap:wrap; gap:40px;">
 
-              <?php
-                $query3 = "select * from skill";
-                $run3 = mysqli_query($db,$query3);
-                ;
-                while($skill = mysqli_fetch_array($run3)){
-              ?>
+          <?php
+            $query3 = "select * from skill";
+            $run3 = mysqli_query($db,$query3);
+            ;
+            while($skill = mysqli_fetch_array($run3)){
+          ?>   
 
-          <div class="progress" style=" flex-basis:48%;">
+            <div class="progress" style=" flex-basis:48%;">
 
-            <span class="skill"><?=$skill['skill_name']?> <i class="val"><?=$skill['skill_level']?>%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="<?=$skill['skill_level']?>" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill"><?=$skill['skill_name']?> <i class="val"><?=$skill['skill_level']?>%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="<?=$skill['skill_level']?>" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
             </div>
-          </div>
           <?php
                 }
           ?>
@@ -289,102 +291,100 @@ $user_data = mysqli_fetch_array($run);
           
 
           <h3 class="resume-title">Education</h3>
-<?php
-  $query4 = "select * from resume";
-  $run4 = mysqli_query($db,$query4);
-  ;
-  while($resume = mysqli_fetch_array($run4)){
-    if($resume['type']=='e'){
+          <?php
+            $query4 = "select * from resume";
+            $run4 = mysqli_query($db,$query4);
+            ;
+            while($resume = mysqli_fetch_array($run4)){
+              if($resume['type']=='e'){
 
-    
-  ?>
+          ?>
 
 
-          <div class="resume-item">
-            <h4><?=$resume['title']?></h4>
-            <h5><?=$resume['time']?></h5>
-            <p><em><?=$resume['org']?></em></p>
-            <p><?=$resume['about_exp']?></p>
-          </div>
-<?php
-}
-  }
-?> 
+            <div class="resume-item">
+              <h4><?=$resume['title']?></h4>
+              <h5><?=$resume['time']?></h5>
+              <p><em><?=$resume['org']?></em></p>
+              <p><?=$resume['about_exp']?></p>
+            </div>
+          <?php
+            }
+              }
+          ?> 
         </div>
         <div class="col-lg-6">
           <h3 class="resume-title">Professional Experience</h3>
 
           
-  <?php
-  $query4 = "select * from resume";
-  $run4 = mysqli_query($db,$query4);
-          while($resume = mysqli_fetch_array($run4)){
-    if($resume['type']=='p'){
+          <?php
+          $query4 = "select * from resume";
+          $run4 = mysqli_query($db,$query4);
+                  while($resume = mysqli_fetch_array($run4)){
+            if($resume['type']=='p'){
 
-    
-  ?>
+            
+          ?>
 
 
-          <div class="resume-item">
-            <h4><?=$resume['title']?></h4>
-            <h5><?=$resume['time']?></h5>
-            <p><em><?=$resume['org']?></em></p>
-            <p><?=$resume['about_exp']?></p>
-          </div>
-<?php
-}
-  }
-?>
+            <div class="resume-item">
+              <h4><?=$resume['title']?></h4>
+              <h5><?=$resume['time']?></h5>
+              <p><em><?=$resume['org']?></em></p>
+              <p><?=$resume['about_exp']?></p>
+            </div>
+          <?php
+            }
+              }
+          ?>
         </div>
         <div class="col-lg-6">
           <h3 class="resume-title">Certifications</h3>
 
           
-  <?php
-  $query4 = "select * from resume";
-  $run4 = mysqli_query($db,$query4);
-          while($resume = mysqli_fetch_array($run4)){
-    if($resume['type']=='c'){
+          <?php
+          $query4 = "select * from resume";
+          $run4 = mysqli_query($db,$query4);
+                  while($resume = mysqli_fetch_array($run4)){
+            if($resume['type']=='c'){
 
-    
-  ?>
+            
+          ?>
 
 
-          <div class="resume-item">
-            <h4><?=$resume['title']?></h4>
-            <h5><?=$resume['time']?></h5>
-            <p><em><?=$resume['org']?></em></p>
-            <p><?=$resume['about_exp']?></p>
-          </div>
-<?php
-}
-  }
-?>
+            <div class="resume-item">
+              <h4><?=$resume['title']?></h4>
+              <h5><?=$resume['time']?></h5>
+              <p><em><?=$resume['org']?></em></p>
+              <p><?=$resume['about_exp']?></p>
+            </div>
+          <?php
+            }
+              }
+          ?>
         </div>
         <div class="col-lg-6">
           <h3 class="resume-title">Projects</h3>
 
           
-  <?php
-  $query4 = "select * from resume";
-  $run4 = mysqli_query($db,$query4);
-          while($resume = mysqli_fetch_array($run4)){
-    if($resume['type']=='pr'){
+          <?php
+            $query4 = "select * from resume";
+            $run4 = mysqli_query($db,$query4);
+                    while($resume = mysqli_fetch_array($run4)){
+              if($resume['type']=='pr'){
 
-    
-  ?>
+          ?>
 
 
-          <div class="resume-item">
-            <h4><?=$resume['title']?></h4>
-            <h5><?=$resume['time']?></h5>
-            <p><em><?=$resume['org']?></em></p>
-            <p><?=$resume['about_exp']?></p>
-          </div>
-<?php
-}
-  }
-?>
+            <div class="resume-item">
+              <h4><?=$resume['title']?></h4>
+              <h5><?=$resume['time']?></h5>
+              <p><em><?=$resume['org']?></em></p>
+              <p><?=$resume['about_exp']?></p>
+            </div>
+          <?php
+            }
+              }
+          ?>
         </div>
       </div>
 
