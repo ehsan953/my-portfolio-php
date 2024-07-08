@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
   visibility: visible;
-  width: 25px;
+  /* width: 25px; */
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
   color: #fff;
@@ -899,7 +899,9 @@ section .container {
 }
 .contact .info-box .social-links a {
   font-size: 18px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   line-height: 1;
   margin-right: 12px;

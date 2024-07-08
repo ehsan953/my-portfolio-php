@@ -34,6 +34,7 @@ $user_data = mysqli_fetch_array($run);
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style2.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Personal - v4.7.0
@@ -306,6 +307,7 @@ $user_data = mysqli_fetch_array($run);
               <h5><?=$resume['time']?></h5>
               <p><em><?=$resume['org']?></em></p>
               <p><?=$resume['about_exp']?></p>
+              
             </div>
           <?php
             }
@@ -377,9 +379,10 @@ $user_data = mysqli_fetch_array($run);
 
             <div class="resume-item">
               <h4><?=$resume['title']?></h4>
-              <h5><?=$resume['time']?></h5>
-              <p><em><?=$resume['org']?></em></p>
-              <p><?=$resume['about_exp']?></p>
+              <!-- <h5><?=$resume['time']?></h5> -->
+              <!-- <p><em><?=$resume['org']?></em></p> -->
+              <p><?=$resume['about_exp']?> <a href="<?=$resume['pr_link']?>"><?=$resume['pr_link']?></a></p>
+              
             </div>
           <?php
             }
@@ -415,8 +418,8 @@ $user_data = mysqli_fetch_array($run);
         ?>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="images/<?=$portfolio['project_pic']?>" class="img-fluid" alt="">
+          <div class="portfolio-wrap" style="height:260px; width:100%">
+            <img src="images/<?=$portfolio['project_pic']?>" class="img-fluid" style="height:100%; width:100%" alt="">
             <div class="portfolio-info">
               <h4><?=$portfolio['project_name']?></h4>
               <p><?=$portfolio['project_type']?></p>
@@ -447,7 +450,7 @@ $user_data = mysqli_fetch_array($run);
 
       <div class="row mt-2">
 
-        <div class="col-md-6 d-flex align-items-stretch">
+        <div class="col-md-7 col-lg-6 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-map"></i>
             <h3>My Address</h3>
@@ -455,12 +458,12 @@ $user_data = mysqli_fetch_array($run);
           </div>
         </div>
 
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+        <div class="col-md-5 col-lg-6 mt-4 mt-md-0 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-share-alt"></i>
             <h3>Social Profiles</h3>
             <?php if($user_data['twitter']!=''){?>
-              <a href="https://twitter.com/<?=$user_data['twitter']?>" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="https://twitter.com/<?=$user_data['twitter']?>" class="twitter" style="margin-left:17px;"><i class="bi bi-twitter"></i></a>
             <?php 
           }
             ?>
@@ -487,14 +490,14 @@ $user_data = mysqli_fetch_array($run);
           </div>
         </div>
 
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+        <div class="col-md-7 col-lg-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-envelope"></i>
             <h3>Email Me</h3>
             <p><a href="mailto:<?=$user_data['email']?>"><?=$user_data['email']?></a></p>
           </div>
         </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+        <div class="col-md-5 col-lg-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-phone-call"></i>
             <h3>Call Me</h3>

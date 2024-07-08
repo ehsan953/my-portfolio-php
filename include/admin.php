@@ -98,18 +98,19 @@ if(isset($_POST['add-pi'])){
     
     }
 
-if(isset($_POST['add-resume'])){
-    $type = $_POST['type'];
-    $title = $_POST['title'];
-    $time = $_POST['time'];
-    $org = $_POST['org'];
-    $about = $_POST['about_exp'];
-        
-        $query = "INSERT INTO resume (type,title,time,org,about_exp) VALUES('$type','$title','$time','$org','$about') ";
-        $run = mysqli_query($db,$query);
-        if($run){
-            echo "<script>window.location.href='../admin/index.php?resumesetting=true';</script>";
-        }
+    if(isset($_POST['add-resume'])){
+        $type = $_POST['type'];
+        $title = $_POST['title'];
+        $time = $_POST['time'];
+        $org = $_POST['org'];
+        $about = $_POST['about_exp'];
+        $link = $_POST['pr_link'];
+            
+            $query = "INSERT INTO resume (type,title,time,org,about_exp,pr_link) VALUES('$type','$title','$time','$org','$about','$link',) ";
+            $run = mysqli_query($db,$query);
+            if($run){
+                echo "<script>window.location.href='../admin/index.php?resumesetting=true';</script>";
+            }
         
     }
 

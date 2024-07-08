@@ -466,6 +466,7 @@ $c++;
                       <th>Time</th>
                       <th>Organization</th>
                       <th>About Experience</th>
+                      <th>Link</th>
 
                       <th style="width: 40px">Action</th>
                     </tr>
@@ -484,7 +485,8 @@ $c++;
                         <td><?=$pi['time']?></td>
                         <td><?=$pi['org']?></td>
                         <td><?=$pi['about_exp']?></td>
-                        
+                        <td><?=$pi['pr_link']?></td>
+                        <!-- ('$pi') is used for current record in the resume table -->
                         <td>
                           <a href="../include/deleteresume.php?id=<?=$pi['id']?>">Delete</a>
                         </td>
@@ -528,7 +530,10 @@ $c++;
                     <label for="exampleInputEmail1">About Experience</label>
                     <input type="text" class="form-control" name="about_exp" id="exampleInputEmail1">
                   </div>
-                  
+                  <div class="form-group col-6">
+                    <label for="exampleInputEmail1">Project Link</label>
+                    <input type="text" class="form-control" name="pr_link" id="exampleInputEmail1">
+                  </div>
                   
                   
                 </div>
