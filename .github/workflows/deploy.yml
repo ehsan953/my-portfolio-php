@@ -21,4 +21,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: myportfolio/  # Local directory to deploy
-          server-dir: /htdocs  # Directory on the server
+          server-dir: /htdocs/  # Directory on the server
