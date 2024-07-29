@@ -137,7 +137,6 @@ if(isset($_POST['add-pi'])){
             $mobile = $_POST['mobile'];
         
         
-        
             $query = "UPDATE contact SET ";
             $query.= "address='$address',";
             $query.= "email='$email',";

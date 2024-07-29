@@ -713,10 +713,10 @@ $c++;
                 </div>
               </form>
             </div>
-           <?php
-         }elseif(isset($_GET['changebackground'])){
-?>
-<div class="card card-primary col-lg-12">
+          <?php
+            }elseif(isset($_GET['changebackground'])){
+          ?>
+            <div class="card card-primary col-lg-12">
               <div class="card-header mb-4">
                 <h3 class="card-title">Change Site Background</h3>
               </div>
@@ -739,9 +739,9 @@ $c++;
                 </div>
               </form>
             </div>
-<?php
-         }elseif(isset($_GET['seosetting'])){
-           ?>
+          <?php
+            }elseif(isset($_GET['seosetting'])){
+          ?>
 
            <div class="card card-primary col-lg-12">
               <div class="card-header mb-4">
@@ -782,11 +782,11 @@ $c++;
             </div>
 
 
-           <?php
-         }elseif(isset($_GET['accountsetting'])){
-           ?>
+          <?php
+            }elseif(isset($_GET['accountsetting'])){
+          ?>
 
-<div class="card card-primary col-lg-12">
+            <div class="card card-primary col-lg-12">
               <div class="card-header mb-4">
                 <h3 class="card-title">Update Account Setting</h3>
               </div>
@@ -823,12 +823,11 @@ $c++;
                 </div>
               </form>
             </div>
-           <?php
-
-         }else{
-        ?>
+                <?php
+                  }else{
+                ?>
         
-        <form method="post" action="../include/admin.php">
+                  <form method="post" action="../include/admin.php">
                     <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
                       <input type="checkbox" name="home" class="custom-control-input" id="customSwitch1"
                       <?php
@@ -884,10 +883,10 @@ $c++;
                       <label class="custom-control-label" for="customSwitch5">Contact Section</label>
                     </div>
                     <input type="submit" class="btn btn-sm btn-primary" name="update_section" value="Save Changes">
-          </form>
-          <?php
-          }
-          ?>
+                  </form>
+                <?php
+                  }
+                ?>
         </div>
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
