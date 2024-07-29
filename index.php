@@ -400,7 +400,7 @@ $user_data = mysqli_fetch_array($run);
 
       <div class="section-title">
         <h2>Portfolio</h2>
-        <p>My Works xxxxxyyyyyyyyzzzzzz</p>
+        <p>My Works</p>
       </div>
 
       <!-- <div class="row">
