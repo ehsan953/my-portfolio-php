@@ -400,7 +400,7 @@ $user_data = mysqli_fetch_array($run);
 
       <div class="section-title">
         <h2>Portfolio</h2>
-        <p>My Works cxxzxzZzx</p>
+        <p>My Works</p>
       </div>
 
       <!-- <div class="row">
@@ -417,8 +417,8 @@ $user_data = mysqli_fetch_array($run);
 
         ?>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap" style="height:260px; width:100%">
+        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap" style="height:220px; width:100%; object-fit:cover">
             <img src="images/<?=$portfolio['project_pic']?>" class="img-fluid" style="height:100%; width:100%" alt="">
             <div class="portfolio-info">
               <h4><?=$portfolio['project_name']?></h4>
@@ -454,7 +454,10 @@ $user_data = mysqli_fetch_array($run);
           <div class="info-box">
             <i class="bx bx-map"></i>
             <h3>My Address</h3>
-            <p><?=$user_data['address']?></p>
+            <!-- <p><?=$user_data['address']?></p> -->
+            <a href="https://www.google.com/maps/search/?api=1&query=<?=urlencode($user_data['address'])?>" target="_blank" style="margin-left:17px">
+              <?=$user_data['address']?>
+            </a>
           </div>
         </div>
 
@@ -462,28 +465,28 @@ $user_data = mysqli_fetch_array($run);
           <div class="info-box">
             <i class="bx bx-share-alt"></i>
             <h3>Social Profiles</h3>
-            <?php if($user_data['twitter']!=''){?>
+            <!-- <?php if($user_data['twitter']!=''){?>
               <a href="https://twitter.com/<?=$user_data['twitter']?>" class="twitter" style="margin-left:17px;"><i class="bi bi-twitter"></i></a>
             <?php 
           }
-            ?>
+            ?> -->
           <?php if($user_data['facebook']!=''){?>
-              <a href="https://facebook.com/<?=$user_data['facebook']?>" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="<?=$user_data['facebook']?>" class="facebook" style="margin-left:17px;"><i class="bi bi-facebook"></i></a>
               <?php 
           }
               ?>
           <?php if($user_data['instagram']!=''){?>
-              <a href="https://instagram.com/<?=$user_data['instagram']?>" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="<?=$user_data['instagram']?>" class="instagram" style="margin-left:12px;"><i class="bi bi-instagram"></i></a>
               <?php
           }
               ?>
           <?php if($user_data['skype']!=''){?>
-              <a href="https://skype.com/<?=$user_data['skype']?>" class="skype"><i class="bi bi-skype"></i></a>
+              <a href="<?=$user_data['skype']?>" class="skype" style="margin-left:12px;"><i class="bi bi-skype"></i></a>
               <?php
           }
               ?>
           <?php if($user_data['linkedin']!=''){?>
-              <a href="https://linkedin.com/<?=$user_data['linkedin']?>" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              <a href="<?=$user_data['linkedin']?>" class="linkedin" style="margin-left:12px;"><i class="bi bi-linkedin"></i></a>
             <?php
           }
             ?>
@@ -500,8 +503,9 @@ $user_data = mysqli_fetch_array($run);
         <div class="col-md-5 col-lg-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-phone-call"></i>
-            <h3>Call Me</h3>
-            <p><a href="tel:<?=$user_data['mobile']?>"><?=$user_data['mobile']?></a></p>
+            <h3>WhatsApp</h3>
+            <!-- <p><a href="tel:<?=$user_data['mobile']?>"><?=$user_data['mobile']?></a></p> -->
+            <p><a href="https://wa.me/+92<?=$user_data['mobile']?>" target="_blank"><?=$user_data['mobile']?></a></p>
           </div>
         </div>
       </div>
