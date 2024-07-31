@@ -104,11 +104,11 @@ $user_data = mysqli_fetch_array($run);
         ?>
         <div class="social-links">
 
-        <?php if($user_data['twitter']!=''){?>
+        <!-- <?php if($user_data['twitter']!=''){?>
         <a href="https://twitter.com/<?=$user_data['twitter']?>" class="twitter"><i class="bi bi-twitter"></i></a>
         <?php
       }
-        ?>
+        ?> -->
 
         <?php if($user_data['facebook']!=''){?>
         <!-- <a href="https://www.facebook.com/ehsan.rajpoot.7140?mibextid=ZbWKwL<?=$user_data['facebook']?>" class="facebook"><i class="bi bi-facebook"></i></a> -->
@@ -119,7 +119,7 @@ $user_data = mysqli_fetch_array($run);
 
         <?php if($user_data['instagram']!=''){?>
           <!-- <a href="https://instagram.com/<?=$user_data['instagram']?>" class="instagram"><i class="bi bi-instagram"></i></a> -->
-        <a href="https://instagram.com/ehsanrajpoot39?igshid=NGExMmI2YTkyZg==" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.instagram.com/ehsanrajpoot39" class="instagram"><i class="bi bi-instagram"></i></a>
         <?php
       }
         ?>
