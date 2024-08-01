@@ -172,7 +172,7 @@ $user_data = mysqli_fetch_array($run);
           <p class="fst-italic">
             <?=$user_data['about_subtitle']?>
           </p>
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-lg-6">
               <ul>
 
@@ -190,7 +190,7 @@ $user_data = mysqli_fetch_array($run);
               </ul>
             </div>
             
-          </div>
+          </div> -->
           <p>
            <?=$user_data['about_desc']?>
           </p>
@@ -259,7 +259,7 @@ $user_data = mysqli_fetch_array($run);
             while($skill = mysqli_fetch_array($run3)){
           ?>   
 
-            <div class="progress" style=" flex-basis:48%;">
+            <div class="progress" style=" flex-basis:100%;">
 
               <span class="skill"><?=$skill['skill_name']?> <i class="val"><?=$skill['skill_level']?>%</i></span>
               <div class="progress-bar-wrap">
