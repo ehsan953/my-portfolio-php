@@ -16,7 +16,21 @@ $user_data = mysqli_fetch_array($run);
   <title><?=$user_data['page_title']?></title>
   <meta content="<?=$user_data['description']?>" name="description">
   <meta content="<?=$user_data['keywords']?>" name="keywords">
-
+  <style>
+    .progress{
+        flex-basis:100%;
+      }
+    @media(min-width:768px){
+      .progress{
+        flex-basis:46%;
+      }
+    }
+    @media(min-width:1024px){
+      .progress{
+        flex-basis:47%;
+      }
+    }
+  </style>
   <!-- Favicons -->
   <link href="images/<?=$user_data['siteicon']?>" rel="icon">
   <link href="images/<?=$user_data['siteicon']?>" rel="apple-touch-icon">
@@ -258,8 +272,7 @@ $user_data = mysqli_fetch_array($run);
             ;
             while($skill = mysqli_fetch_array($run3)){
           ?>   
-
-            <div class="progress" style=" flex-basis:100%;">
+            <div class="progress" style="">
 
               <span class="skill"><?=$skill['skill_name']?> <i class="val"><?=$skill['skill_level']?>%</i></span>
               <div class="progress-bar-wrap">
