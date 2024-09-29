@@ -20,9 +20,15 @@ $user_data = mysqli_fetch_array($run);
     .progress{
         flex-basis:100%;
       }
+      .myName, .myDesc{
+        text-align:center;
+      }
     @media(min-width:768px){
       .progress{
         flex-basis:46%;
+      }
+      .myName, .myDesc{
+        text-align:left;
       }
     }
     @media(min-width:1024px){
@@ -66,10 +72,10 @@ $user_data = mysqli_fetch_array($run);
   <header id="header">
     <div class="container">
 
-      <h1><a href="index.php"><?=$user_data['title']?></a></h1>
+      <h1 class="myName"><a href="index.php"><?=$user_data['title']?></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2><?=$user_data['subtitle']?></h2>
+      <h2 class="myDesc"><?=$user_data['subtitle']?></h2>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -133,7 +139,7 @@ $user_data = mysqli_fetch_array($run);
 
         <?php if($user_data['instagram']!=''){?>
           <!-- <a href="https://instagram.com/<?=$user_data['instagram']?>" class="instagram"><i class="bi bi-instagram"></i></a> -->
-        <a href="https://www.instagram.com/ehsanrajpoot39" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.instagram.com/ehsanrajpoot39?igsh=MWJvdDR3aDY0ZGptMw==" class="instagram"><i class="bi bi-instagram"></i></a>
         <?php
       }
         ?>
@@ -489,7 +495,7 @@ $user_data = mysqli_fetch_array($run);
           }
               ?>
           <?php if($user_data['instagram']!=''){?>
-              <a href="<?=$user_data['instagram']?>" class="instagram" style="margin-left:12px;"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.instagram.com/ehsanrajpoot39?igsh=MWJvdDR3aDY0ZGptMw==" class="instagram" style="margin-left:12px;"><i class="bi bi-instagram"></i></a>
               <?php
           }
               ?>
@@ -510,7 +516,7 @@ $user_data = mysqli_fetch_array($run);
           <div class="info-box">
             <i class="bx bx-envelope"></i>
             <h3>Email Me</h3>
-            <p><a href="mailto:<?=$user_data['email']?>"><?=$user_data['email']?></a></p>
+            <p style="word-break: break-word;"><a href="mailto:<?=$user_data['email']?>"><?=$user_data['email']?></a></p>
           </div>
         </div>
         <div class="col-md-5 col-lg-6 mt-4 d-flex align-items-stretch">
